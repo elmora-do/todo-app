@@ -16,6 +16,7 @@ export default function App(): ReactElement {
           <Route path="/list" element={<List />} />
           <Route path="/new" element={<New />} />
           <Route path="/details" element={<Details />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
@@ -24,4 +25,8 @@ export default function App(): ReactElement {
 
 function Title() {
   return <h1>TODO List</h1>;
+}
+
+function NotFound() {
+  return <h1>Elemento no encontrado</h1>;
 }
